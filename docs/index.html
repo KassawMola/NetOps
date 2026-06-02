@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MINI Catalyst Center IP Admin Demo</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="panel login-panel" id="loginPanel">
+        <div class="brand-row">
+          <div class="mark" aria-hidden="true">M</div>
+          <div>
+            <p class="eyebrow">Network Operations Demo</p>
+            <h1>MINI Catalyst Center IP Admin</h1>
+          </div>
+        </div>
+        <form id="loginForm" class="login-form">
+          <label>
+            Username
+            <input id="username" value="admin" autocomplete="username">
+          </label>
+          <label>
+            Password
+            <input id="password" value="admin123!" type="password" autocomplete="current-password">
+          </label>
+          <button type="submit">Sign in</button>
+          <p class="hint">Demo access: admin / admin123!</p>
+        </form>
+      </section>
+
+      <section class="dashboard is-hidden" id="dashboard">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Admin Console</p>
+            <h2>Operations Overview</h2>
+          </div>
+          <button id="logoutButton" class="ghost-button" type="button">Sign out</button>
+        </header>
+
+        <nav class="tabs" aria-label="Dashboard sections">
+          <button class="tab-button is-active" type="button" data-view="overview">Overview</button>
+          <button class="tab-button" type="button" data-view="inventory">Inventory</button>
+          <button class="tab-button" type="button" data-view="actions">Actions</button>
+        </nav>
+
+        <section class="metrics view-panel" id="overview" aria-label="Network metrics">
+          <article>
+            <span>Devices</span>
+            <strong>4</strong>
+          </article>
+          <article>
+            <span>Healthy</span>
+            <strong>3</strong>
+          </article>
+          <article>
+            <span>Demo IP</span>
+            <strong>192.168.1.1</strong>
+          </article>
+          <article>
+            <span>Admin User</span>
+            <strong>admin</strong>
+          </article>
+        </section>
+
+        <section class="workspace view-panel" id="inventory">
+          <div class="network-map" aria-label="Demo topology">
+            <div class="core-node">Core</div>
+            <div class="link link-a"></div>
+            <div class="link link-b"></div>
+            <div class="link link-c"></div>
+            <div class="access-node node-a">Access A</div>
+            <div class="access-node node-b">Access B</div>
+            <div class="access-node node-c">Edge</div>
+          </div>
+
+          <div class="device-table">
+            <div class="table-head">
+              <span>Device</span>
+              <span>IP</span>
+              <span>Role</span>
+              <span>Status</span>
+              <span>Owner</span>
+            </div>
+            <div class="table-row">
+              <span>catalyst-demo-01</span>
+              <span>192.168.1.1</span>
+              <span>Core</span>
+              <span class="ok">Healthy</span>
+              <span>admin</span>
+            </div>
+            <div class="table-row">
+              <span>catalyst-demo-02</span>
+              <span>192.168.1.1</span>
+              <span>Access</span>
+              <span class="ok">Healthy</span>
+              <span>admin</span>
+            </div>
+            <div class="table-row">
+              <span>catalyst-demo-03</span>
+              <span>192.168.1.1</span>
+              <span>Edge</span>
+              <span class="warn">Review</span>
+              <span>admin</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="actions view-panel is-hidden" id="actions">
+          <div class="action-grid">
+            <button type="button" data-action="sync">Sync Inventory</button>
+            <button type="button" data-action="backup">Run Backup</button>
+            <button type="button" data-action="ports">Check Ports</button>
+          </div>
+          <pre id="actionLog">Ready for demo actions.</pre>
+        </section>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
