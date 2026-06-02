@@ -1,6 +1,6 @@
 # MINI Catalyst Center IP Admin
 
-Portfolio-ready demo for network inventory, admin access, and operational visibility. The project is intentionally clean: it uses demo hostnames, `192.168.1.1` as the demo IP, `admin/admin123!` lab credentials, and no production addresses or company-specific references.
+Portfolio-ready demo for network inventory, admin access, and operational visibility. The project is intentionally clean: it uses demo hostnames, `192.168.1.1` as the demo IP, `admin/admin123` lab credentials, and no production addresses or company-specific references.
 
 ## Features
 
