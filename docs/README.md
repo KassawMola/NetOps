@@ -1,14 +1,9 @@
-# MINI Catalyst Center IP Admin Demo Site
+# Legacy Demo Folder
 
-Static GitHub Pages demo for the MINI Catalyst Center IP Admin project.
+This folder is kept only for historical local reference.
 
-Demo access:
+The active demo is published here:
 
-```text
-Username: admin
-Password: admin123!
-Demo IP: 192.168.1.1
-```
+https://kassawmola.github.io/mini_catalyst_center/
 
-The site runs fully in the browser and does not call production systems.
-
+No fixed demo password is stored in this repository.
